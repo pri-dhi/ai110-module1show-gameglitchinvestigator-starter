@@ -39,6 +39,8 @@ I decided that a bug was really fixed when I ran the code and ran several test c
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
 
+The secret number kept changing because Streamlit reruns the whole script every time I clicked a button, so the random number line kept running again. I would explain Streamlit reruns as a refresh, that causes the code to keep running over and over again every time you interact with it. Session state serves as a saved memory that saves when you refresh, so without keeping that updated, variables refresh. We were able to make this fix by storing the secret in st.session_state.secret and only creating it once when "secret" was not already in st.session_state.
+
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -47,3 +49,5 @@ I decided that a bug was really fixed when I ran the code and ran several test c
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+I definitely want to use AI to create more test cases in future labs and projects. I also am glad that I got the opportunity to become more familiar with Git. One thing that I would do differently next time would be to spend more time on creating good test cases as well as thoroughly understanding what each of my changes do and asking the AI more questions. This project changed the way I think about AI generated code in that it is much more optimized and time efficient than manual code. However, I also realized how powerful it is in the way that it can almost be too aggressive with the changes it makes, which is why it's important to double check the code.
